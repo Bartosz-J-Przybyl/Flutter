@@ -122,6 +122,15 @@ class PierwszyEkran extends StatelessWidget {
   }
 }
 
+Route _createRoute() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => const Ekran2(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      return child;
+    },
+  );
+}
+
 class Ekran2 extends StatelessWidget {
   const Ekran2({Key? key}) : super(key: key);
   @override
